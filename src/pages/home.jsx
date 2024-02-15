@@ -2,6 +2,7 @@ import About from '../components/about';
 import Banner from '../components/banner';
 import Footer from '../components/footer';
 import Join from '../components/join';
+import Location from '../components/location';
 import RegisterForm from '../components/registerForm';
 import Speakers from '../components/speakers';
 import Support from '../components/support';
@@ -17,6 +18,7 @@ const Home = () => {
         <Join />
         <RegisterForm />
         <Speakers />
+        <Location />
         <Footer />
       </div>
     </div>
