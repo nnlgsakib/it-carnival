@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .sectionDesign {
+    @apply shadow-lg py-3 px-3 lg:px-4 mt-4 lg:mt-8 border-2 rounded-md lg:rounded-lg;
+  }
+  .colors {
+    @apply absolute right-[20%] top-0 hidden h-[150px] w-[200px] rotate-12 rounded-3xl bg-gradient-to-l from-blue-600 to-sky-400 opacity-20 blur-3xl filter dark:block dark:opacity-40 lg:top-44 lg:-right-20 lg:h-72 lg:w-[350px] xl:h-80 xl:w-[400px];
+  }
+  .colors2 {
+    @apply absolute right-[20%] top-0 h-[200px] w-[200px] rotate-12 rounded-3xl bg-gradient-to-l from-blue-400 to-sky-500 opacity-20 blur-3xl filter dark:block dark:opacity-30 lg:top-5;
+  }
+  .speakersIamgeContainer {
+    @apply cursor-pointer w-[250px] h-[250px] overflow-hidden  hover:border-[#893eba] transition ease-in rounded-full;
+  }
+  .speakersIamge {
+    @apply rounded-full  w-full h-full hover:scale-105 duration-300;
+  }
+
+  .formInput {
+    @apply py-2 w-[280px] md:w-[340px] lg:w-[360px]  px-2 border-[1px] focus:outline-none font-medium rounded-md bg-transparent border-[#19c3fc];
+  }
+}
