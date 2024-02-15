@@ -8,12 +8,12 @@ import { TbWorld } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <div className='py-3'>
+    <div className='py-5 mt-6'>
       <div>
         <img className='w-40' src={logo2} alt="" />
       </div>
-      <div className='flex gap-3 pt-2 justify-between'>
-        <p>
+      <div className='flex gap-3 pt-2 place-items-center justify-between'>
+        <p className='font-semibold'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, debitis.
         </p>
         <div className='flex gap-1'>

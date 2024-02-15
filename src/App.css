@@ -5,17 +5,6 @@
 body {
   color: #fff;
   background-color: #03030a;
-  
-}
-/* styles.css or your separate CSS file */
-.bg-banner {
-  background-image: url("/src/assets/banner.png");
-  width: 100%;
-  height: 700px;
-  /* Add other background properties if needed */
-}
-.hide {
-  overflow: hidden !important;
 }
 
 .borderColor {
@@ -26,12 +15,28 @@ body {
   position: relative;
 }
 
-.gradient-text {
-  background: linear-gradient(to right, #19c3fc, #d1b9e2);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
 .shadowcolor {
   box-shadow: 1px 0px 7px 0px #1089ff;
+}
+/* scroll bar */
+::-webkit-scrollbar-button {
+  height: 12px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-promary);
+}
+::-webkit-scrollbar-thumb {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: #19c3fc;
+  -webkit-box-shadow: inset 0 0px 0px #19c3fc;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #19c3fc;
 }

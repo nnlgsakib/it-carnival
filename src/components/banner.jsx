@@ -1,6 +1,12 @@
 import Header from "./header";
 import backgroundImage from '../assets/banner.png';
 const Banner = () => {
+  const scrollToTextSection = () => {
+    const textSection = document.getElementById('registerSection');
+    if (textSection) {
+      textSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div className="">
       <Header />
@@ -16,8 +22,8 @@ const Banner = () => {
         >
           <div className=" bg-black h-full  bg-opacity-50">
             <div className="text-[#fff] absolute top-1/4 lg:top-1/4 px-5">
-              <h1 className="text-lg md:text-3xl lg:text-5xl font-semibold text-white ">
-                The ninth anniversary of Edulife IT Institute
+              <h1 className="text-xl md:text-3xl lg:text-5xl font-semibold text-white ">
+                {"The nine'th anniversary of Edulife IT Institute"}
               </h1>
               <p className=" font-medium mt-2">
                 Hilltracts IT Cornival Lorem ipsum dolor sit amet consectetur
@@ -26,12 +32,10 @@ const Banner = () => {
               </p>
               <div>
                 <div id=" ">
-                  <a href="register">
 
-                    <button className="bg-gradient-to-l from-[#19c3fc] to-slate-800 text-white mt-5 lg:mt-8 px-8 py-2 rounded-md  hover:scale-[1.03] duration-200 border-2  font-medium text-lg">
-                      Register Now
-                    </button>
-                  </a>
+                  <button onClick={() => scrollToTextSection()} className="bg-gradient-to-l from-[#19c3fc] to-slate-800 text-white mt-5 lg:mt-8 px-3 lg:px-8 py-1 lg:py-2 rounded-md  hover:scale-[1.03] duration-200 border-2  font-medium lg:text-lg">
+                    Register Now
+                  </button>
                 </div>
               </div>
             </div>

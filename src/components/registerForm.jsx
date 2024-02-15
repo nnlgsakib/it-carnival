@@ -43,23 +43,20 @@ const RegisterForm = () => {
 
 
   return (
-    <div id="_register">
-      <div>
-        <h2 className="text-2xl font-semibold py-5">Register</h2>
+    <div id="registerSection">
+      <div className="py-5">
+        <h2 className="text-2xl font-semibold">Register</h2>
+        <div className="w-8 h-1 mt-1 bg-gradient-to-r from-cyan-400  to-[#893eba] bg-white rounded-sm"></div>
       </div>
-
       <div>
-
-
         <div className="flex flex-col justify-center items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <input
               onChange={(e) => setOrderData(prevData => ({ ...prevData, name: e?.target?.value }))}
-
               className="formInput" type="text" placeholder="Your Name" />
+
             <input
               onChange={(e) => setOrderData(prevData => ({ ...prevData, phone: e?.target?.value }))}
-
               className="formInput" type="text" placeholder="Your Phone" />
           </div>
 
@@ -67,13 +64,13 @@ const RegisterForm = () => {
             <input
               onChange={(e) => setOrderData(prevData => ({ ...prevData, email: e?.target?.value }))}
               className="formInput" type="text" placeholder="Email" />
+
             <input
               onChange={(e) => setOrderData(prevData => ({ ...prevData, trxId: e?.target?.value }))}
-
               className="formInput" type="text" placeholder="Transaction" />
           </div>
-          <div className="text-center">
-            <button onClick={() => addOrder()} className="border-[2px] border-gray-100 px-5 py-1 rounded-md mt-5 text-center ">Submit</button>
+          <div className="text-center mt-8">
+            <button onClick={() => addOrder()} className=" border-[2px] border-[#19c3fc] px-7 py-2 rounded-md mt-5 text-center ">Submit</button>
           </div>
         </div>
       </div>
