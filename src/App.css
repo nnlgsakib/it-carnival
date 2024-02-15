@@ -40,3 +40,99 @@ body {
 ::-webkit-scrollbar-thumb:window-inactive {
   background: #19c3fc;
 }
+
+/* image section */
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+.box {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 100% !important;
+  overflow: hidden;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animate 7s linear infinite;
+}
+
+.box:hover::before {
+  inset: -20px 0px;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  background: rgb(15, 9, 42);
+  border-radius: 50%;
+  z-index: 1;
+}
+.content {
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #31a5e3;
+  z-index: 3;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+.box:hover .content img {
+  opacity: 0;
+}
+
+.content h2 {
+  position: relative;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.06px;
+  text-transform: uppercase;
+}
+
+.content h2 p {
+  font-weight: 300;
+  font-size: 16px;
+}
+.content p {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: black;
+  border-radius: 25px;
+  font-weight: 500;
+}
