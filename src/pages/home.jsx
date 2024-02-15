@@ -1,6 +1,7 @@
 import About from '../components/about';
 import Banner from '../components/banner';
 import Footer from '../components/footer';
+import Join from '../components/join';
 import RegisterForm from '../components/registerForm';
 import Speakers from '../components/speakers';
 import Support from '../components/support';
@@ -13,6 +14,7 @@ const Home = () => {
 
         <About />
         <Support />
+        <Join />
         <RegisterForm />
         <Speakers />
         <Footer />
