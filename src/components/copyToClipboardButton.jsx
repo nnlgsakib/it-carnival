@@ -26,9 +26,9 @@ const CopyToClipboardButton = ({ textToCopy }) => {
   }, [textToCopy]);
 
   return (
-    <button ref={copyButtonRef} className='flex  place-items-center'>
-      <strong className="text-cyan-400 cursor-pointer px-1"> 01816575225 </strong> <FaRegCopy className="inline-block mr-2" />
-    </button>
+    <p ref={copyButtonRef} className='flex'>
+      <p className="text-cyan-400 cursor-pointer px-1"> 01816575225 </p> <FaRegCopy className="inline-block mr-2" />
+    </p>
   );
 };
 

@@ -19,7 +19,7 @@ const Home = () => {
         <RegisterForm />
         <Speakers />
         <Location />
-        <Surprising />
+        {/* <Surprising /> */}
         <Footer />
       </div>
     </div>

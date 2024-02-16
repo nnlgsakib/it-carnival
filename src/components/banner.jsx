@@ -21,8 +21,8 @@ const Banner = () => {
           }}
         >
           <div className=" bg-black h-full  bg-opacity-50">
-            <div className="max-w-[1280px] mx-auto">
-              <div className="text-[#fff] absolute text-center lg:text-left top-1/3 lg:top-1/3 lg:px-7">
+            <div className="max-w-[1280px] mx-auto px-3">
+              <div className="text-[#fff] absolute text-center lg:text-left top-1/4 lg:top-1/3 lg:px-7">
 
                 <h1 className="text-3xl lg:text-6xl leading-[1.2] font-semibold text-white ">
                   {"Power Up"}  <br /> {"Your Knowledge & Skills"}

@@ -1,7 +1,8 @@
-import speakers5 from "../assets/images/pic-01.jpg";
+import speakers1 from "../assets/images/pic-01.jpg";
 import speakers2 from "../assets/images/pic-02.jpg";
-import speakers1 from "../assets/images/pic-03.jpg";
-import speakers3 from "../assets/images/pic-04.jpg";
+import speakers3 from "../assets/images/pic-03.jpg";
+import speakers4 from "../assets/images/pic-04.jpg";
+import speakers5 from "../assets/images/rabbil.png";
 
 const Speakers = () => {
   const allSpeakers = [
@@ -11,22 +12,22 @@ const Speakers = () => {
       title: 'Founder & Educator, Learn With Hasin Hayder'
     },
     {
-      img: speakers1,
+      img: speakers2,
       name: "Rabbil Hasan Rupom",
       title: 'Founder & Educator, Learn with Rabbil Hasan'
     },
     {
-      img: speakers1,
+      img: speakers3,
       name: "Saidur Rahman Setu",
       title: 'Founder & Educator, JS Bangladesh'
     },
     {
-      img: speakers1,
+      img: speakers4,
       name: "Founder & Educator, JS Bangladesh",
       title: 'Founder, Jadupc'
     },
     {
-      img: speakers1,
+      img: speakers5,
       name: "Founder & Educator, JS Bangladesh",
       title: 'Head of Engineering, ZELF'
     },
@@ -40,7 +41,7 @@ const Speakers = () => {
           <h2 className="text-2xl lg:pb-4 lg:text-4xl  text-white font-semibold  ">
             Speakers
           </h2>
-          <div className="w-8 h-1 mt-1 bg-gradient-to-r from-cyan-400  to-[#893eba] bg-white rounded-sm"></div>
+          <div className="w-8 h-1 mt-1 bg-gradient-to-r from-[#19c3fc]  to-[#19d449] bg-white rounded-sm"></div>
         </div>
 
         <h2 className="font-medium">
@@ -52,7 +53,7 @@ const Speakers = () => {
       <div className="mx-auto grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5 lg:gap-8">
         <div className="w-[250px] text-center">
           <div className="  speakersIamgeContainer borderColor">
-            <img className="speakersIamge" src={speakers5} alt="" />
+            <img className="speakersIamge" src={speakers1} alt="" />
           </div>
           <div className="">
             <h2 className="speakersName">Hasin Hayder</h2>
@@ -92,7 +93,7 @@ const Speakers = () => {
           <div className="speakersIamgeContainer borderColor">
             <img
               className="rounded-full hover:scale-105 duration-300"
-              src={speakers1}
+              src={speakers4}
               alt=""
             />
           </div>
@@ -106,7 +107,7 @@ const Speakers = () => {
         <div className="body flex-col text-center">
           <div className="box">
             <div className='content'>
-              <img className='' src={speakers3} alt="" />
+              <img className='' src={speakers5} alt="" />
               <div className='flex flex-col'>
                 {/* <h2>Lorem, ipsum dolor.</h2>
                 <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}

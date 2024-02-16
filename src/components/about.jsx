@@ -10,10 +10,10 @@ const About = () => {
           {/* <p className="text-[400px]  bg-gradient-to-r from-blue-600 via-green-500 to-indigo-100 inline-block font-extrabold text-transparent bg-clip-text"> C</p> */}
         </div>
         {/*  */}
-        <div>
+        <div className=' '>
           <div>
             <h2 className="text-2xl pb-2 lg:pb-4 lg:text-4xl  text-white font-semibold    text-transparent bg-clip-text">ABOUT</h2>
-            <div className="w-8 h-1 bg-gradient-to-r from-cyan-400  to-[#893eba] bg-white rounded-sm"></div>
+            <div className="w-10 h-1 bg-gradient-to-r from-cyan-400  to-[#19d449] bg-white rounded-sm"></div>
           </div>
           <div className=" mt-5 text-gray-300 text-lg">
             <p className="mt-4 "><strong className="text-cyan-400"> Hill Tracts IT Carnival 2024</strong> is a pioneering event aimed at fostering innovation, collaboration, and empowerment within the IT community of the Chittagong Hill Tracts region. This landmark gathering serves as a platform for IT entrepreneurs, freelancers, and online professionals to come together, share knowledge, and explore opportunities for growth and development.</p>

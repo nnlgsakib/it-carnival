@@ -7,7 +7,6 @@ import logo6 from '../assets/sponsor/ZealCafe.png';
 
 
 const Support = () => {
-
   const logos = [
     {
       id: '1',
@@ -27,17 +26,12 @@ const Support = () => {
     },
     {
       id: '5',
-      img: logo4
-    },
-    {
-      id: '5',
       img: logo5
     },
     {
       id: '5',
       img: logo6
     },
-
   ];
   return (
     <div className='py-6'>
@@ -55,9 +49,7 @@ const Support = () => {
             );
           })
         }
-
       </div>
-
     </div>
   );
 };
