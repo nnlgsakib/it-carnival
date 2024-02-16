@@ -16,14 +16,26 @@ const DashboardLayout = () => {
         </div>
         <div className="flex gap-5 max-w-[1200px] mx-auto">
           <div className="w-[200px] bg-gray-900 h-screen overflow-auto">
-            <ul className="flex flex-col items-center gap-3">
-              <li className="hover:bg-slate-700 w-full text-center py-2 font-bold text-[16px] hover:text-red-400 duration-300">
-                <NavLink to="/dashboard/registration" className="block">Registration</NavLink>
-              </li>
-              <li className="hover:bg-slate-700 w-full text-center py-2 font-bold text-[16px] hover:text-red-400 duration-300">
-                <NavLink to="/dashboard/payment" className="block">Payment</NavLink>
-              </li>
-            </ul>
+            <nav className="flex flex-col gap-3 px-3">
+              <NavLink
+                to="/dashboard/registration"
+                className=" w-full py-3 rounded pl-2 transition-all hover:bg-green-300 hover:text-black duration-300"
+              >
+                Registration
+              </NavLink>
+              <NavLink
+                to="/dashboard/payment"
+                className=" w-full py-3 rounded pl-2 transition-all hover:bg-green-300 hover:text-black duration-300"
+              >
+                Payment
+              </NavLink>
+              <NavLink
+                to="/dashboard/add-payment"
+                className=" w-full py-3 rounded pl-2 transition-all hover:bg-green-300 hover:text-black duration-300"
+              >
+                Add-Payment
+              </NavLink>
+            </nav>
           </div>
           <Outlet />
         </div>

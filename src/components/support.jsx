@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 const Support = () => {
   return (
     <div className='py-6'>
-      <p className='text-[#45cefb] font-medium'>SUPPORTED BY THE NEXT GENERATION OF COMPANIES</p>
+      <p className='text-[#45cefb] font-medium'>SPONSORS & PARTNERS</p>
 
       <div className='grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-5'>
         <div className='border-[1px] cursor-pointer border-[#19c3fc]    transation  duration-500  ease-in-out hover:scale-[1.07] shadowcolor w-fit p-3 rounded-md'>
