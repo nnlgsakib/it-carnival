@@ -15,11 +15,8 @@ const Speakers = () => {
         </div>
 
         <h2 className="font-medium">
-          Join us at{" "}
-          <span className="text-gradient-to-r from-[#071448] to-[#1f068c]">
-            HillTracts it cernival
-          </span>{" "}
-          to learn from the best and brightest minds in programming,
+          Join the HillTracts IT Carnival 2024 and be packed with networking,
+          knowledge-sharing and other activities.
         </h2>
       </div>
 
