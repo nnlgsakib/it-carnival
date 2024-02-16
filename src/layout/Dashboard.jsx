@@ -35,6 +35,12 @@ const DashboardLayout = () => {
               >
                 Add-Payment
               </NavLink>
+              <NavLink
+                to="/dashboard/add-registration"
+                className=" w-full py-3 rounded pl-2 transition-all hover:bg-green-300 hover:text-black duration-300"
+              >
+                Add-Registration
+              </NavLink>
             </nav>
           </div>
           <Outlet />

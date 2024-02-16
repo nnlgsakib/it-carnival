@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form";
 
-const AddPayment = () => {
+const AddRegistration = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
     <>
       <div className=" py-5 pb-10 w-full">
         <h2 className="text-3xl text-center py-5 font-semibold ">
-          Add Payment
+          Add Registration
         </h2>
         <div>
           <form
@@ -24,7 +24,6 @@ const AddPayment = () => {
                   type="text"
                   id="method"
                   {...register("method", { required: true })}
-                  placeholder="method"
                 />
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
@@ -36,7 +35,6 @@ const AddPayment = () => {
                   type="number"
                   id="pay"
                   {...register("pay", { required: true })}
-                  placeholder="Your Payment number"
                 />
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
@@ -48,7 +46,6 @@ const AddPayment = () => {
                   type="text"
                   id="amount"
                   {...register("amount", { required: true })}
-                  placeholder="Your Amount"
                 />
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
@@ -60,7 +57,6 @@ const AddPayment = () => {
                   type="text"
                   id="trx"
                   {...register("trx", { required: true })}
-                  placeholder="Transition Id"
                 />
               </div>
             </div>
@@ -74,4 +70,4 @@ const AddPayment = () => {
   );
 };
 
-export default AddPayment;
+export default AddRegistration;
