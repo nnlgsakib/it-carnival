@@ -50,9 +50,11 @@ body {
 }
 .box {
   position: relative;
-  width: 300px;
-  height: 300px;
-  background: rgb(255, 255, 255);
+  border: 2px solid red;
+  z-index: 9;
+  width: 230px;
+  height: 230px;
+  background: rgb(1, 0, 0);
   border: none;
   border-radius: 100% !important;
   overflow: hidden;
@@ -63,7 +65,7 @@ body {
   inset: -20px 70px;
   background: linear-gradient(315deg, #00ccff, #d400d4);
   transition: 0.5s;
-  animation: animate 7s linear infinite;
+  animation: animate 12s linear infinite;
 }
 
 .box:hover::before {
@@ -81,15 +83,15 @@ body {
 .box::after {
   content: "";
   position: absolute;
-  inset: 8px;
+  inset: 2px;
   background: rgb(15, 9, 42);
   border-radius: 50%;
   z-index: 1;
 }
 .content {
   position: absolute;
-  inset: 30px;
-  border: 6px solid #31a5e3;
+  inset: 20px;
+  border: 3px solid #31a5e3;
   z-index: 3;
   border-radius: 50%;
   overflow: hidden;
@@ -107,12 +109,12 @@ body {
   object-fit: cover;
   transition: 0.5s;
   pointer-events: none;
-  z-index: 3;
+  z-index: 5;
 }
-.box:hover .content img {
+/* .box:hover .content img {
   opacity: 0;
-}
-
+} */
+/* 
 .content h2 {
   position: relative;
   font-size: 1.5rem;
@@ -121,7 +123,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.06px;
   text-transform: uppercase;
-}
+} */
 
 .content h2 p {
   font-weight: 300;
@@ -136,3 +138,22 @@ body {
   border-radius: 25px;
   font-weight: 500;
 }
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.anim {
+  transition: 0.5s;
+  animation: animate 12s linear infinite;
+}
+.anim {
+  position: fixed;
+}
+
+/* bg-gradient-to-r from-[#7BEFFF] to-[#07C926] inline-block  bg-clip-text text-transparent */

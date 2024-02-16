@@ -13,16 +13,16 @@
     @apply absolute right-[20%] top-0 h-[200px] w-[200px] rotate-12 rounded-3xl bg-gradient-to-l from-blue-400 to-sky-500 opacity-20 blur-3xl filter dark:block dark:opacity-30 lg:top-5;
   }
   .speakersIamgeContainer {
-    @apply cursor-pointer w-[250px] h-[250px] overflow-hidden  hover:border-[#893eba] transition ease-in rounded-full;
+    @apply cursor-pointer w-[230px] h-[230px] overflow-hidden  hover:border-[#19d449] transition ease-in rounded-full;
   }
   .speakersIamge {
-    @apply rounded-full  w-full h-full hover:scale-105 duration-300;
+    @apply rounded-full  w-full h-full hover:scale-105 duration-500;
   }
   .speakersName {
     @apply text-[#19c3fc] cursor-pointer text-2xl lg:text-3xl font-bold py-2;
   }
 
   .formInput {
-    @apply py-2 w-[280px] md:w-[340px] lg:w-[360px]  px-2 border-[1px] focus:outline-none font-medium rounded-md bg-transparent border-[#19c3fc];
+    @apply py-3 w-[300px] md:w-[340px] lg:w-[370px]  px-2 border-[1px] focus:outline-none font-medium rounded-lg bg-transparent border-[#19c3fc];
   }
 }

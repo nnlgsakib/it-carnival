@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
-
+import ClipboardJS from 'clipboard';
+import { useEffect, useRef } from 'react';
+import { FaRegCopy } from 'react-icons/fa';
 
 const RegisterForm = () => {
+  const copyButtonRef = useRef();
 
 
   const [orderData, setOrderData] = useState({
@@ -12,11 +14,9 @@ const RegisterForm = () => {
     phone: "",
     email: "",
     trxId: "",
-
   });
-  console.log(orderData, 'oeder');
 
-  const addOrder = () => {
+  const handelSubmit = () => {
 
     const isAnyValueEmpty = Object.values(orderData).some(value => value === "");
     if (isAnyValueEmpty) {
@@ -60,31 +60,72 @@ const RegisterForm = () => {
   };
 
 
+  const textToCopy = "01816575225";
+
+
+  useEffect(() => {
+    const clipboard = new ClipboardJS(copyButtonRef.current, {
+      text: () => textToCopy,
+    });
+
+    clipboard.on('success', (e) => {
+      alert('Text copied to clipboard:', e.text);
+      e.clearSelection();
+    });
+
+    clipboard.on('error', (e) => {
+      console.error('Failed to copy text to clipboard:', e.action);
+    });
+
+    return () => {
+      clipboard.destroy();
+    };
+  }, [textToCopy]);
+
+
 
   return (
-    <div id="registerSection" >
-      <div>
-
+    <div id="registerSection   " >
+      <div className=""></div>
+      <div className="lg:w-[65%] mx-auto">
         <h2 className="text-2xl font-semibold">Register</h2>
-        <div className="w-8 h-1 mt-1 bg-gradient-to-r from-cyan-400  to-[#893eba] bg-white rounded-sm"></div>
+        <div className="w-10 h-1 mt-1 bg-gradient-to-r from-[#19c3fc]  to-[#19d449] bg-white rounded-sm"></div>
       </div>
 
       <div className="w-fit mx-auto">
         <div className="py-5 ">
-          <div className=" flex gap-1 pb-1 place-items-center">
-            <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Payment 300 TK to confirm registration.</p>
+          <div className=" flex gap-1 pb-1">
+            <div className="">
+              <IoMdCheckmarkCircleOutline className="text-green-400 pt-1  text-xl" />
+            </div>
+            <p className="text-gray-300  font-semibold">300 TK must be sent to confirm registration.</p>
           </div>
-          <div className=" flex gap-1 pb-1 place-items-center">
-            <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Payment can be made by Bkash or Nagad (only send money is available)</p>
+
+          <div className=" flex gap-1">
+            <div className="">
+              <IoMdCheckmarkCircleOutline className="text-green-400 pt-1  text-xl" />
+            </div>
+            <p className="text-gray-300 ml-1 font-semibold">Money can be sent through Bkash or Nagad (only send money is available)</p>
           </div>
-          <div className=" flex gap-1 pb-1 place-items-center">
-            <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Payment to 01816575225 number (only send money is available)</p>
+
+          <div className=" flex gap-1 pb">
+            <div className="">
+              <IoMdCheckmarkCircleOutline className="text-green-400 pt-1  text-xl" />
+            </div>
+            <div className="">
+              <div className="text-gray-300 font-semibold ">
+                <p>Send money to this No. <span ref={copyButtonRef} className="text-cyan-400">01816575225 <FaRegCopy className="inline-block cursor-pointer text-white mb-1" /></span> (only send money is available) </p>
+                {/* <p className="text-cyan-400 h-fit inline-block cursor-pointer"> </p>
+                <p className="h-fit"> </p>
+                <p> (only send money is available) </p> */}
+              </div>
+            </div>
           </div>
-          <div className=" flex gap-1 pb-1 place-items-center">
-            <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
+
+          <div className=" flex gap-1 pb-1">
+            <div className="">
+              <IoMdCheckmarkCircleOutline className="text-green-400 pt-1  text-xl" />
+            </div>
             <p className="text-gray-300  font-semibold">Fill up all details with the payment transaction ID and submit.</p>
           </div>
         </div>
@@ -127,9 +168,10 @@ const RegisterForm = () => {
               </div>
             </div>
             <div className="text-center mt-8">
-              <button
-                onClick={() => addOrder()}
-                className=" border-[2px] border-[#19c3fc] px-7 hover:bg-gradient-to-l from-[#19c3fc] to-slate-800 py-2 rounded-md mt-5 text-center font-medium ">Submit</button>
+
+              <button onClick={() => handelSubmit()} className="bg-gradient-to-r from-[#19c3fc] to-[#19d349] text-white text-xl mt-4 lg:mt-8  px-10   py-3 rounded-md  hover:scale-[1.03] duration-200    font-medium lg:text-lg">
+                Submit
+              </button>
             </div>
           </div>
         </div>
@@ -139,3 +181,5 @@ const RegisterForm = () => {
 };
 
 export default RegisterForm;
+
+{/* <CopyToClipboardButton className='' textToCopy={textToCopy} /> */ }
