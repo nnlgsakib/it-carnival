@@ -16,9 +16,8 @@ const About = () => {
             <div className="w-8 h-1 bg-gradient-to-r from-cyan-400  to-[#893eba] bg-white rounded-sm"></div>
           </div>
           <div className=" mt-5 text-gray-300 text-lg">
-            <p className="mt-4 "> <strong className="text-cyan-400">HILL TRACTS IT CARNIVAL</strong> is a community conference for developers, admins, DevOps engineers, testers, documentation writers and other contributors to open source technologies.</p>
-            <p className="mt-4 ">What’s next? Any topics that are discussed or actively researched yet their impact is still potential. Best practices and great examples of open source research collaborations are welcome. Trending topics from software development, metaverse, new trends in existing areas</p>
-            <p className="mt-4 ">Artificial intelligence, large language models, data storing and processing, best practices for data lakes/data mesh, and parallelism and vector computing.</p>
+            <p className="mt-4 ">Hill Tracts IT Carnival 2024 is a pioneering event aimed at fostering innovation, collaboration, and empowerment within the IT community of the Chittagong Hill Tracts region. This landmark gathering serves as a platform for IT entrepreneurs, freelancers, and online professionals to come together, share knowledge, and explore opportunities for growth and development.</p>
+            <p className="mt-4 ">Our mission is to catalyze the growth and advancement of the IT ecosystem in the Chittagong Hill Tracts region by providing a dynamic platform for networking, learning, and collaboration. Our vision is to establish the Hill Tracts IT Carnival as the premier event for showcasing innovation, driving entrepreneurship, and empowering individuals to harness the transformative power of technology for positive change.</p>
           </div>
         </div>
       </div>
