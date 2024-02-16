@@ -4,6 +4,35 @@ import speakers1 from "../assets/images/pic-03.jpg";
 import speakers3 from "../assets/images/pic-04.jpg";
 
 const Speakers = () => {
+  const allSpeakers = [
+    {
+      img: speakers1,
+      name: "Hasin Hayder",
+      title: 'Founder & Educator, Learn With Hasin Hayder'
+    },
+    {
+      img: speakers1,
+      name: "Rabbil Hasan Rupom",
+      title: 'Founder & Educator, Learn with Rabbil Hasan'
+    },
+    {
+      img: speakers1,
+      name: "Saidur Rahman Setu",
+      title: 'Founder & Educator, JS Bangladesh'
+    },
+    {
+      img: speakers1,
+      name: "Founder & Educator, JS Bangladesh",
+      title: 'Founder, Jadupc'
+    },
+    {
+      img: speakers1,
+      name: "Founder & Educator, JS Bangladesh",
+      title: 'Head of Engineering, ZELF'
+    },
+
+  ];
+
   return (
     <div className=" mt-5 lg:mt-8">
       <div className="my-5">
@@ -74,19 +103,76 @@ const Speakers = () => {
             </p>
           </div>
         </div>
-        <div className="body">
+        <div className="body flex-col text-center">
           <div className="box">
             <div className='content'>
-
               <img className='' src={speakers3} alt="" />
               <div className='flex flex-col'>
-
-                <h2>Lorem, ipsum dolor.</h2>
-                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p>
+                {/* <h2>Lorem, ipsum dolor.</h2>
+                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
               </div>
             </div>
           </div>
+          <div>
+            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
+            <p className="text-[#d8d8d8] font-medium">
+              founder of Giant Marketers
+            </p>
+          </div>
         </div>
+        <div className="body flex-col text-center">
+          <div className="box">
+            <div className='content'>
+              <img className='' src={speakers3} alt="" />
+              <div className='flex flex-col'>
+                {/* <h2>Lorem, ipsum dolor.</h2>
+                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
+            <p className="text-[#d8d8d8] font-medium">
+              founder of Giant Marketers
+            </p>
+          </div>
+        </div>
+        <div className="body flex-col text-center">
+          <div className="box">
+            <div className='content'>
+              <img className='' src={speakers3} alt="" />
+              <div className='flex flex-col'>
+                {/* <h2>Lorem, ipsum dolor.</h2>
+                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
+            <p className="text-[#d8d8d8] font-medium">
+              founder of Giant Marketers
+            </p>
+          </div>
+        </div>
+        <div className="body flex-col text-center">
+          <div className="box">
+            <div className='content'>
+              <img className='' src={speakers3} alt="" />
+              <div className='flex flex-col'>
+                {/* <h2>Lorem, ipsum dolor.</h2>
+                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
+            <p className="text-[#d8d8d8] font-medium">
+              founder of Giant Marketers
+            </p>
+          </div>
+        </div>
+
+
       </div>
     </div>
   );

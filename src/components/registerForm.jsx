@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
-
+import CopyToClipboardButton from "./copyToClipboardButton";
 
 const RegisterForm = () => {
 
@@ -14,9 +13,8 @@ const RegisterForm = () => {
     trxId: "",
 
   });
-  console.log(orderData, 'oeder');
 
-  const addOrder = () => {
+  const handelSubmit = () => {
 
     const isAnyValueEmpty = Object.values(orderData).some(value => value === "");
     if (isAnyValueEmpty) {
@@ -59,7 +57,7 @@ const RegisterForm = () => {
       });
   };
 
-
+  const textToCopy = "01816575225";
 
   return (
     <div id="registerSection" >
@@ -73,16 +71,20 @@ const RegisterForm = () => {
         <div className="py-5 ">
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Payment 300 TK to confirm registration.</p>
+            <p className="text-gray-300  font-semibold">300 TK must be sent to confirm registration.</p>
           </div>
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Payment can be made by Bkash or Nagad (only send money is available)</p>
+            <p className="text-gray-300  font-semibold">Money can be sent through Bkash or Nagad (only send money is available)</p>
           </div>
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Payment to 01816575225 number (only send money is available)</p>
+            <p className="text-gray-300  flex font-semibold">Send money to this No.
+              <CopyToClipboardButton textToCopy={textToCopy} />
+
+              (only send money is available)</p>
           </div>
+
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
             <p className="text-gray-300  font-semibold">Fill up all details with the payment transaction ID and submit.</p>
@@ -128,7 +130,7 @@ const RegisterForm = () => {
             </div>
             <div className="text-center mt-8">
               <button
-                onClick={() => addOrder()}
+                onClick={() => handelSubmit()}
                 className=" border-[2px] border-[#19c3fc] px-7 hover:bg-gradient-to-l from-[#19c3fc] to-slate-800 py-2 rounded-md mt-5 text-center font-medium ">Submit</button>
             </div>
           </div>
