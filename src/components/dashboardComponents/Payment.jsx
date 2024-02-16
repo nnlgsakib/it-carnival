@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 
 const Payment = () => {
   const [registration, setRegistration] = useState([]);
@@ -9,12 +10,28 @@ const Payment = () => {
       .then((res) => res.json())
       .then((data) => setRegistration(data.data));
   }, []);
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <>
-      <div className=" py-5 pb-10">
+      <div className=" py-5 pb-10 w-full relative">
         <h2 className="text-3xl text-center py-5   font-semibold  ">Payment</h2>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="absolute w-[30%] right-0"
+        >
+          <div className="relative ">
+            <input
+              className="w-full px-4 py-2 rounded-lg border outline-blue-300 text-black"
+              type="text"
+              id="method"
+              {...register("method", { required: true })}
+              placeholder="Search"
+            />
+          </div>
+        </form>
         <div>
-          <div className="flex justify-center align-middle mx-auto">
+          <div className="flex justify-center align-middle mx-auto mt-20">
             <div className="border-[#0f0d0d] overflow-x-scroll  w-[400px] lg:w-[900px] border-[1px] rounded-md mt-5">
               <table className="  md:w-full lg:w-full  divide divide-[#BDBDBD]">
                 <thead className=" border-b-[2px] text-[#FFFFFF] border-[#FFFFFF]">

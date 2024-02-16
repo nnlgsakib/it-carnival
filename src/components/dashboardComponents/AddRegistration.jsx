@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-
 const AddRegistration = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => console.log(data);
@@ -39,7 +38,7 @@ const AddRegistration = () => {
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
                 <label className="block mb-2 text-[#FFFFFF]" htmlFor="amount">
-                 Amount
+                  Amount
                 </label>
                 <input
                   className="w-full px-4 py-2 rounded-lg border border-red-400 outline-blue-300"
@@ -50,7 +49,7 @@ const AddRegistration = () => {
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
                 <label className="block mb-2 text-[#FFFFFF]" htmlFor="trx">
-                 Transition Id
+                  Transition Id
                 </label>
                 <input
                   className="w-full px-4 py-2 rounded-lg border border-red-400 outline-blue-300"
@@ -60,9 +59,12 @@ const AddRegistration = () => {
                 />
               </div>
             </div>
-              <button className="w-full bg-gradient-to-l from-[#19c3fc] to-slate-800 rounded-lg py-2 font-semibold mt-10" type="submit">
-                Submit
-              </button>
+            <button
+              className="w-full bg-gradient-to-l from-[#19c3fc] to-slate-800 rounded-lg py-2 font-semibold mt-10"
+              type="submit"
+            >
+              Submit
+            </button>
           </form>
         </div>
       </div>
