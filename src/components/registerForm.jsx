@@ -41,7 +41,7 @@ const RegisterForm = () => {
         if (responseData.statusCode === 404) {
           return Swal.fire({
             icon: "error",
-            title: "Success",
+            title: "Faield",
             text: `${responseData?.message}`,
           });
         }

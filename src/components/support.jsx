@@ -8,7 +8,7 @@ const Support = () => {
 
       <div className='grid justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-5'>
         <div className='border-[1px] cursor-pointer border-[#19c3fc]    transation  duration-500  ease-in-out hover:scale-[1.07] shadowcolor w-fit p-3 rounded-md'>
-          <img className='w-[220px]  px-3' src={logo} alt="" />
+          <img className='w-[230px] h-[70px] px-3' src={logo} alt="" />
         </div>
         <div className='border-[1px] cursor-pointer border-[#19c3fc] shadowcolor  transation  duration-500  ease-in-out hover:scale-[1.07] hover:shadow-[#19c3fc] w-fit p-3 rounded-md'>
           <img className='w-[220px]  px-3' src={logo} alt="" />

@@ -6,6 +6,7 @@ import Location from '../components/location';
 import RegisterForm from '../components/registerForm';
 import Speakers from '../components/speakers';
 import Support from '../components/support';
+import Surprising from '../components/surprising';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <RegisterForm />
         <Speakers />
         <Location />
+        <Surprising />
         <Footer />
       </div>
     </div>
