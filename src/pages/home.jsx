@@ -12,7 +12,6 @@ const Home = () => {
     <div>
       <Banner />
       <div className='px-3 lg:px-6 max-w-[1280px] mx-auto'>
-
         <About />
         <Support />
         <Join />

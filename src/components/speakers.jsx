@@ -6,7 +6,7 @@ import speakers3 from '../assets/images/pic-04.jpg';
 
 const Speakers = () => {
   return (
-    <div className=" mt-5 lg:mt-8 ">
+    <div className=" mt-5 lg:mt-8">
       <div className='my-5'>
         <div className='pb-3'>
           <h2 className="text-2xl lg:pb-4 lg:text-4xl  text-white font-semibold  ">Speakers</h2>
