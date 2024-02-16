@@ -16,11 +16,11 @@ const RegisterForm = () => {
   const addOrder = () => {
     const isAnyValueEmpty = Object.values(orderData).some(value => value === "");
     if (isAnyValueEmpty) {
-      alert("There is at least one empty value in orderData");
+      alert("All fild ar required");
       return;
     }
 
-    fetch("http://localhost:5000/api/v1/register", {
+    fetch("https://firstaidbox-server.vercel.app/api/v1/register", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -31,8 +31,10 @@ const RegisterForm = () => {
       .then((res) => res.json())
       .then((responseData) => {
         // Handle the response data as needed
-        console.log(responseData?.data);
-        alert("Successfuly order complete");
+        console.log(responseData);
+        alert(responseData?.message);
+
+
       })
 
       .catch((error) => {
@@ -97,7 +99,7 @@ const RegisterForm = () => {
             </div>
             <div className="text-center mt-8">
               <button
-                // onClick={() => addOrder()}
+                onClick={() => addOrder()}
                 className=" border-[2px] border-[#19c3fc] px-7 hover:bg-gradient-to-l from-[#19c3fc] to-slate-800 py-2 rounded-md mt-5 text-center font-medium ">Submit</button>
             </div>
           </div>
