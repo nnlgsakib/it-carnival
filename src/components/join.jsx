@@ -1,25 +1,13 @@
-import img from '../assets/images/pic-01.jpg';
 
 const Join = () => {
   return (
-    <div>
+    <div className="py-6">
 
-      <h2 className=' bg-gradient-to-r from-[#7BEFFF] to-[#07C926] inline-block  bg-clip-text text-transparent text-2xl font-semibold' >why you</h2>
-
-      <div className="body">
-        <div className="box">
-          <div className='content'>
-
-            <img className='' src={img} alt="" />
-            <div className='flex flex-col'>
-
-              <h2>Lorem, ipsum dolor.</h2>
-              <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p>
-            </div>
-          </div>
-        </div>
-
-
+      <h2 className=' bg-gradient-to-r from-[#7BEFFF] to-[#07C926] inline-block  bg-clip-text text-transparent text-2xl font-semibold' >Why will you join?</h2>
+      <div className="ms-10 mt-4 font-medium">
+        <p className="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, autem.</p>
+        <p className="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, autem.</p>
+        <p className="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, autem.</p>
       </div>
     </div>
   );

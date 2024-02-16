@@ -74,6 +74,19 @@ const Speakers = () => {
             </p>
           </div>
         </div>
+        <div className="body">
+          <div className="box">
+            <div className='content'>
+
+              <img className='' src={speakers3} alt="" />
+              <div className='flex flex-col'>
+
+                <h2>Lorem, ipsum dolor.</h2>
+                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
