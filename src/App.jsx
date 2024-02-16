@@ -10,6 +10,7 @@ import Dashboard from "./pages/dashboard";
 import DashboardLayout from "./layout/Dashboard";
 import Registration from "./components/dashboardComponents/Registration";
 import Payment from "./components/dashboardComponents/Payment";
+import AddPayment from "./components/dashboardComponents/AddPayment";
 
 function App() {
   const router = createBrowserRouter([
@@ -43,6 +44,10 @@ function App() {
         {
           path: "payment",
           element: <Payment />,
+        },
+        {
+          path: "add-payment",
+          element: <AddPayment />,
         },
       ],
     },

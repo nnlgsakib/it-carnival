@@ -57,19 +57,19 @@ const RegisterForm = () => {
         <div className="py-5 ">
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae.</p>
+            <p className="text-gray-300  font-semibold">Payment 300 TK to confirm registration.</p>
           </div>
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae.</p>
+            <p className="text-gray-300  font-semibold">Payment can be made by Bkash or Nagad (only send money is available)</p>
           </div>
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae.</p>
+            <p className="text-gray-300  font-semibold">Payment to 01816575225 number (only send money is available)</p>
           </div>
           <div className=" flex gap-1 pb-1 place-items-center">
             <IoMdCheckmarkCircleOutline className="text-emerald-500 text-xl" />
-            <p className="text-gray-300  font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, beatae.</p>
+            <p className="text-gray-300  font-semibold">Fill up all details with the payment transaction ID and submit.</p>
           </div>
         </div>
 
