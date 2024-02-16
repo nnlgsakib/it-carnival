@@ -1,13 +1,17 @@
-
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './App.css';
-import Root from './layout/Root';
-import Home from './pages/home';
-import Dashboard from './pages/dashboard';
-import DashboardLayout from './layout/Dashboard';
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import "./App.css";
+import Root from "./layout/Root";
+import Home from "./pages/home";
+import Dashboard from "./pages/dashboard";
+import DashboardLayout from "./layout/Dashboard";
+import Registration from "./components/dashboardComponents/Registration";
+import Payment from "./components/dashboardComponents/Payment";
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -22,7 +26,6 @@ function App() {
           path: "/",
           element: <Home />,
         },
-
       ],
     },
     {
@@ -30,16 +33,23 @@ function App() {
       element: <DashboardLayout />,
       children: [
         {
-          path: "/dashboard",
-          element: <Dashboard />,
+          index: true,
+          element: <Navigate to="/dashboard/registration" />,
         },
-
+        {
+          path: "registration",
+          element: <Registration />,
+        },
+        {
+          path: "payment",
+          element: <Payment />,
+        },
       ],
     },
   ]);
 
   return (
-    <div className=' '>
+    <div className=" ">
       <RouterProvider router={router} />
     </div>
   );

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import logo from "../assets/logo.png";
+import { NavLink } from "react-router-dom";
 const DashboardLayout = () => {
   return (
     <div>
@@ -15,9 +16,13 @@ const DashboardLayout = () => {
         </div>
         <div className="flex gap-5 max-w-[1200px] mx-auto">
           <div className="w-[200px] bg-gray-900 h-screen overflow-auto">
-          <ul className="flex flex-col items-center gap-3">
-              <li className="hover:bg-slate-700 w-full text-center py-2 font-bold text-[16px] hover:text-red-400 duration-300">Registration</li>
-              <li className="hover:bg-slate-700 w-full text-center py-2 font-bold text-[16px] hover:text-red-400 duration-300">Payment</li>
+            <ul className="flex flex-col items-center gap-3">
+              <li className="hover:bg-slate-700 w-full text-center py-2 font-bold text-[16px] hover:text-red-400 duration-300">
+                <NavLink to="/dashboard/registration" className="block">Registration</NavLink>
+              </li>
+              <li className="hover:bg-slate-700 w-full text-center py-2 font-bold text-[16px] hover:text-red-400 duration-300">
+                <NavLink to="/dashboard/payment" className="block">Payment</NavLink>
+              </li>
             </ul>
           </div>
           <Outlet />
