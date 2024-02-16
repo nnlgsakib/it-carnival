@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
 
 const RegisterForm = () => {
 
@@ -14,10 +17,14 @@ const RegisterForm = () => {
   console.log(orderData, 'oeder');
 
   const addOrder = () => {
+
     const isAnyValueEmpty = Object.values(orderData).some(value => value === "");
     if (isAnyValueEmpty) {
-      alert("All fild ar required");
-      return;
+      return Swal.fire({
+        icon: "error",
+        title: "All fild are required",
+        text: ` All fild ar required`,
+      });
     }
 
     fetch("https://firstaidbox-server.vercel.app/api/v1/register", {
@@ -30,10 +37,19 @@ const RegisterForm = () => {
     })
       .then((res) => res.json())
       .then((responseData) => {
-        // Handle the response data as needed
         console.log(responseData);
-        alert(responseData?.message);
-
+        if (responseData.statusCode === 404) {
+          return Swal.fire({
+            icon: "error",
+            title: "Success",
+            text: `${responseData?.message}`,
+          });
+        }
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: `${responseData?.message}`,
+        });
 
       })
 
@@ -79,23 +95,36 @@ const RegisterForm = () => {
         <div>
           <div className="flex flex-col justify-center items-center">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <input
-                onChange={(e) => setOrderData(prevData => ({ ...prevData, name: e?.target?.value }))}
-                className="formInput" type="text" placeholder="Your Name" />
+              <div>
+                <p className="text-xs pb-[3px] text-gray-300 font-medium">Name <span className="text-red-600">*</span>  </p>
+                <input
+                  onChange={(e) => setOrderData(prevData => ({ ...prevData, name: e?.target?.value }))}
+                  className="formInput" type="text" placeholder="Your Name" />
+              </div>
 
-              <input
-                onChange={(e) => setOrderData(prevData => ({ ...prevData, phone: e?.target?.value }))}
-                className="formInput" type="text" placeholder="Your Phone" />
+              <div className="">
+                <p className="text-xs pb-[3px] text-gray-300 font-medium">Phone <span className="text-red-600">*</span>  </p>
+
+                <input
+                  onChange={(e) => setOrderData(prevData => ({ ...prevData, phone: e?.target?.value }))}
+                  className="formInput" type="text" placeholder="Your Phone" />
+              </div>
             </div>
 
             <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <input
-                onChange={(e) => setOrderData(prevData => ({ ...prevData, email: e?.target?.value }))}
-                className="formInput" type="email" placeholder="Email" />
+              <div>
+                <p className="text-xs pb-[3px] text-gray-300 font-medium">Email <span className="text-red-600">*</span>  </p>
+                <input
+                  onChange={(e) => setOrderData(prevData => ({ ...prevData, email: e?.target?.value }))}
+                  className="formInput" type="email" placeholder="Email" />
+              </div>
 
-              <input
-                onChange={(e) => setOrderData(prevData => ({ ...prevData, trxId: e?.target?.value }))}
-                className="formInput" type="text" placeholder="Transaction id" />
+              <div>
+                <p className="text-xs pb-[3px] text-gray-300 font-medium">Payment transaction id <span className="text-red-600">*</span>  </p>
+                <input
+                  onChange={(e) => setOrderData(prevData => ({ ...prevData, trxId: e?.target?.value }))}
+                  className="formInput" type="text" placeholder="Transaction id" />
+              </div>
             </div>
             <div className="text-center mt-8">
               <button
