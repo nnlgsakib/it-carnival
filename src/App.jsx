@@ -8,8 +8,6 @@ import DashboardLayout from './layout/Dashboard';
 
 function App() {
 
-
-
   const router = createBrowserRouter([
     {
       path: "/",
