@@ -15,7 +15,7 @@ const Payment = () => {
   return (
     <>
       <div className=" py-5 pb-10 w-full relative">
-        <h2 className="text-3xl text-center py-5   font-semibold  ">Payment</h2>
+        <h2 className="text-3xl text-center py-5 font-semibold  ">Payment</h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="absolute w-[30%] right-0"
