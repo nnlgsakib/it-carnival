@@ -152,12 +152,34 @@ body {
   }
 }
 
+.icons {
+  transition: 0.5s;
+  animation: iconsroted 12s linear infinite;
+}
+
+@keyframes iconsroted {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 .anim {
   transition: 0.5s;
   animation: animate 12s linear infinite;
 }
+
 .anim {
   position: fixed;
 }
 
 /* bg-gradient-to-r from-[#7BEFFF] to-[#07C926] inline-block  bg-clip-text text-transparent */
+
+/* border roted */
+
+.icons {
+  transition: 0.5s;
+  animation: iconsroted 10s linear infinite;
+}
