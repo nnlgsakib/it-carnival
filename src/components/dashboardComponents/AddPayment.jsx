@@ -60,7 +60,7 @@ const AddPayment = () => {
                 />
                 {errors.method && (
                   <span className="text-red-500 text-xs">
-                   this field is required
+                    Method is required
                   </span>
                 )}
               </div>
@@ -72,9 +72,17 @@ const AddPayment = () => {
                   className="w-full px-4 py-2 rounded-lg border border-red-400 outline-blue-300"
                   type="number"
                   id="paymentNumber"
-                  {...register("paymentNumber", { required: true })}
+                  {...register("paymentNumber", {
+                    required: true,
+                    minLength: 11,
+                  })}
                   placeholder="Your Payment number"
-                />
+                />{" "}
+                {errors.paymentNumber && (
+                  <span className="text-red-500 text-xs">
+                    Payment Number is required
+                  </span>
+                )}
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
                 <label className="block mb-2 text-[#FFFFFF]" htmlFor="amount">
@@ -86,7 +94,12 @@ const AddPayment = () => {
                   id="amount"
                   {...register("amount", { required: true })}
                   placeholder="Your Amount"
-                />
+                />{" "}
+                {errors.amount && (
+                  <span className="text-red-500 text-xs">
+                    Amount is required
+                  </span>
+                )}
               </div>
               <div className="lg:col-span-6 col-span-12 w-full">
                 <label className="block mb-2 text-[#FFFFFF]" htmlFor="trx">
@@ -98,7 +111,12 @@ const AddPayment = () => {
                   id="trxId"
                   {...register("trxId", { required: true })}
                   placeholder="Transition Id"
-                />
+                />{" "}
+                {errors.trxId && (
+                  <span className="text-red-500 text-xs">
+                    Trx Id is required
+                  </span>
+                )}
               </div>
             </div>
             <button

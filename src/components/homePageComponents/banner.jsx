@@ -1,5 +1,5 @@
 import Header from "./header";
-import backgroundImage from '../assets/banner.png';
+import backgroundImage from '../../assets/banner.png';
 const Banner = () => {
   const scrollToTextSection = () => {
     const textSection = document.getElementById('registerSection');

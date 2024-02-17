@@ -1,12 +1,16 @@
 import { useForm } from "react-hook-form";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (data) => console.log(data);
   return (
     <div className=" py-5 pb-10 w-full">
       <h2 className="text-3xl text-center py-5 font-semibold ">Login</h2>
-      <div className="bg-gray-900 ring-2 ring-white rounded-lg w-6/12 mx-auto p-5">
+      <div className="bg-gray-900 rounded-lg w-6/12 mx-auto p-5">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col gap-5">
             <div>
@@ -19,7 +23,10 @@ const Login = () => {
                 id="email"
                 {...register("email", { required: true })}
                 placeholder="email"
-              />
+              />{" "}
+              {errors.email && (
+                <span className="text-red-500 text-xs">Email is required</span>
+              )}
             </div>
             <div>
               <label className="block mb-2 text-[#FFFFFF]" htmlFor="password">
@@ -31,7 +38,12 @@ const Login = () => {
                 id="password"
                 {...register("password", { required: true })}
                 placeholder="Password"
-              />
+              />{" "}
+              {errors.password && (
+                <span className="text-red-500 text-xs">
+                  Password is required
+                </span>
+              )}
             </div>{" "}
             <div className="flex justify-between items-center">
               <div className="flex justify-start gap-3 items-center">
@@ -45,7 +57,12 @@ const Login = () => {
                   Remember password
                 </label>
               </div>
-              <a className="text-blue-500 hover:text-blue-900 duration-150" href="/">forgot password?</a>
+              <a
+                className="text-blue-500 hover:text-blue-900 duration-150"
+                href="/"
+              >
+                forgot password?
+              </a>
             </div>
           </div>
           <button

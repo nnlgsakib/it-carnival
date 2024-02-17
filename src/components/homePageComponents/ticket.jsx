@@ -1,6 +1,6 @@
 import html2canvas from 'html2canvas';
 import { useRef } from 'react';
-import image from '../assets/about.png';
+import image from '../../assets/about.png';
 
 const Ticket = () => {
   const containerRef = useRef(null);
