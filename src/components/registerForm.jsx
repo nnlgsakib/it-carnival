@@ -25,8 +25,6 @@ const RegisterForm = () => {
   });
 
   const handelSubmit = () => {
-    openModal();
-    return;
 
     const isAnyValueEmpty = Object.values(orderData).some(value => value === "");
     if (isAnyValueEmpty) {
@@ -34,6 +32,8 @@ const RegisterForm = () => {
         icon: "error",
         title: "All fild are required",
         text: ` All fild ar required`,
+      }).then(() => {
+        openModal();
       });
     }
 
@@ -59,12 +59,14 @@ const RegisterForm = () => {
           icon: "success",
           title: "Success",
           text: `${responseData?.message}`,
+        }).then(() => {
+          openModal();
         });
-
       })
 
       .catch((error) => {
         // Handle errors
+
         console.error('Error fetching data:', error);
       });
   };

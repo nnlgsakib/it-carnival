@@ -1,6 +1,7 @@
 import html2canvas from 'html2canvas';
 import { useRef } from 'react';
 import image from '../assets/about.png';
+import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, onClose }) => {
   const containerRef = useRef(null);
@@ -26,7 +27,7 @@ const Modal = ({ isOpen, onClose }) => {
     }
   };
   return (
-    <div>
+    <div className=''>
       <>
         {/* Background Overlay */}
         {isOpen && (
@@ -37,11 +38,11 @@ const Modal = ({ isOpen, onClose }) => {
               <div className=''>
                 <div
                   onClick={onClose}
-                  className='text-end cursor-pointer p-3 bg-gray-300 w-10 h-10 ms-auto flex  justify-center place-items-center rounded-full'
+                  className='text-end cursor-pointer p-3 bg-gray-900 w-10 h-10 ms-auto flex  justify-center place-items-center rounded-full'
                 >
                   X
                 </div>
-                <div className='max-w-screen  w-[300px] font-semibold  lg:w-[654px]  '>
+                <div className='max-w-screen  w-[300px] font-semibold     '>
                   <div>
                     <p className=' text-md mb-[30px] text-center lg:text-2xl'>
                       Select asset to send
@@ -53,24 +54,26 @@ const Modal = ({ isOpen, onClose }) => {
                       <div ref={containerRef} >
                         {/* Include the HTML content of the webpage you want to capture */}
                         <div className='relative'>
-                          <img className='w-52' src={image} alt='' />
+                          <img className='w-[300px]' src={image} alt='' />
+                          <div>
 
-                          <h1 className='absolute top-10 mx-1'>Your Web Page Content </h1>
-                          <p>This is a sample web page content.</p>
-
+                            <h1 className='absolute top-0 mx-1'>Your Web Page Content </h1>
+                            <div className='absolute bottom-12'>
+                              <h1 className='absolute bottom-12 mx-1'>NO: C-00001                           <p>01568242812</p>
+                              </h1>
+                              <h1 className='absolute bottom-7 mx-1'>Asaduzzaman1156@gmail.com</h1>
+                            </div>
+                          </div>
+                          <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
                         </div>
                       </div>
-                      <button onClick={captureWebPage}>Download as JPG</button>
-
+                      <button onClick={captureWebPage} className="bg-gradient-to-r from-[#19c3fc] to-[#19d349] text-white mt-5 lg:mt-8  px-8 py-2 rounded-md  hover:scale-[1.03] duration-200 font-medium text-md">
+                        Download
+                      </button>
+                      <button className='' onClick={captureWebPage}></button>
                     </div>
                   </div>
                 </div>
-                {/* <button
-                  onClick={onClose}
-                  className='mt-4 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none'
-                >
-                  Close
-                </button> */}
               </div>
             </div>
           </div>
@@ -80,31 +83,9 @@ const Modal = ({ isOpen, onClose }) => {
   );
 };
 
-export default Modal;
-{
-  /* <div className={` ${assets ? "hidden" : "block"} h-screen`}>
-        <div className='h-52   top-0  w-40  bg-red-500'>
-          <div>
-            {" "}
-            <div className='bg-white mt-4   mx-3 flex p-1 rounded-full w-fit gap-4'>
-              <p
-                onClick={() => setShow(1)}
-                className={`${
-                  show == 1 && "bg-[#FF971D] text-[#fff] "
-                } px-3 py-1 rounded-full text-[#FF971D] cursor-pointer `}
-              >
-                Tokens
-              </p>
-              <p
-                onClick={() => setShow(2)}
-                className={`${
-                  show == 2 && "bg-[#FF971D] text-[#fff]"
-                } px-3 py-1 rounded-full text-[#FF971D] cursor-pointer `}
-              >
-                NFTs
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */
-}
+Modal.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
+
+export default Modal; 

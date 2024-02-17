@@ -19,7 +19,6 @@ const Home = () => {
         <Support />
         <Join />
         <RegisterForm />
-        {/* <Ticket /> */}
         <Speakers />
         <Vision />
         <Location />
