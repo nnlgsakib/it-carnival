@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { MdDelete } from "react-icons/md";
+import { FaRegEdit } from "react-icons/fa";
 
 const Registration = () => {
   const [registration, setRegistration] = useState([]);
@@ -8,11 +9,12 @@ const Registration = () => {
   const onSubmit = (data) => console.log(data);
   useEffect(() => {
     fetch(
-      "https://firstaidbox-server.vercel.app/api/v1/register?fbclid=IwAR25BXq3w23m7ht9PnTXxW9VlHrtvzxrPLiu4zOe2y_nXg5ULPTQqAgx3Uo"
+      "https://firstaidbox-server.vercel.app/api/v1/payment"
     )
       .then((res) => res.json())
       .then((data) => setRegistration(data.data));
   }, []);
+  console.log(registration);
   return (
     <>
       <div className=" py-5 pb-10 w-full relative">
@@ -64,45 +66,46 @@ const Registration = () => {
                 </thead>
                 <tbody className=" divide-y divide-[#BDBDBD]">
                   {/* <!-- Table rows go here --> */}
-                  {registration?.data?.map((order) => {
+                  {registration?.data?.map((data) => {
                     return (
-                      <tr className=" " key={order._id}>
+                      <tr className=" " key={data._id}>
                         {/* {console.log(order, "oooo")} */}
                         <td className="pr-6 py-4 whitespace-no-wrap">
                           <div className="ml-4">
-                            <div className="text-sm leading-5 font-medium text-[#1B1B1B]">
-                              {order?.firstName} {order?.lastName}
+                            <div className="text-sm leading-5 font-medium text-[#FFFFFF]">
+                              {data?.name}
                             </div>
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                          <div className="text-sm leading-5 text-[#1B1B1B]">
-                            {order?.phone}
+                          <div className="text-sm leading-5 text-[#FFFFFF]">
+                            {data?.phone}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                           <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {order?.email}
+                            {data?.email}
                           </span>
                         </td>
 
                         <td className="px-6 py-4 whitespace-no-wrap">
                           <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {order?.price}
+                            {data?.price}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                           <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {order?.quantity}
+                            {data?.quantity}
                           </span>
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                           <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {!order?.status ? "Pending" : "Success"}
+                            {!data?.status ? "Pending" : "Success"}
                           </span>
                         </td>
-                        <td className="px-6 py-4 whitespace-no-wrap">
+                        <td className="px-6 py-4 whitespace-no-wrap flex items-center gap-3">
                         <MdDelete className="text-red-500 hover:text-red-800 text-[28px] cursor-pointer"/>
+                        <FaRegEdit  className="text-[#FFFFFF] hover:text-slate-500 text-[24px] cursor-pointer"/>
                         </td>
                       </tr>
                     );

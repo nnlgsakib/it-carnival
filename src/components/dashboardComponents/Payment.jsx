@@ -5,7 +5,7 @@ const Payment = () => {
   const [registration, setRegistration] = useState([]);
   useEffect(() => {
     fetch(
-      "https://firstaidbox-server.vercel.app/api/v1/register?fbclid=IwAR25BXq3w23m7ht9PnTXxW9VlHrtvzxrPLiu4zOe2y_nXg5ULPTQqAgx3Uo"
+      "https://firstaidbox-server.vercel.app/api/v1/payment"
     )
       .then((res) => res.json())
       .then((data) => setRegistration(data.data));
