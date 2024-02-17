@@ -2,7 +2,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-import logo from "../assets/white-logo.png";
+import logo from "../../assets/white-logo.png";
 
 const Footer = () => {
   return (

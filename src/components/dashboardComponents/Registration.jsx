@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { MdDelete } from "react-icons/md";
-import { FaRegEdit } from "react-icons/fa";
+import { FaRegEdit, FaSearch } from "react-icons/fa";
 
 const Registration = () => {
   const [registration, setRegistration] = useState([]);
@@ -25,14 +25,15 @@ const Registration = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="absolute w-[30%] right-0"
         >
-          <div className="relative ">
+          <div className="relative flex items-center gap-5">
             <input
               className="w-full px-4 py-2 rounded-lg border outline-blue-300 text-black"
               type="text"
               id="method"
-              {...register("method", { required: true })}
+              {...register("method")}
               placeholder="Search"
             />
+            <FaSearch className="text-4xl text-white hover:text-slate-500 duration-200"/>
           </div>
         </form>
         <div>

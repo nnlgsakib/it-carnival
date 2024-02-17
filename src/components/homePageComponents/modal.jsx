@@ -1,6 +1,7 @@
 import html2canvas from 'html2canvas';
 import { useRef } from 'react';
-import image from '../assets/about.png';
+import image from '../../assets/about.png';
+
 import PropTypes from 'prop-types';
 
 const Modal = ({ isOpen, onClose }) => {

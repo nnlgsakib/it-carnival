@@ -1,9 +1,9 @@
-import logo1 from '../assets/logo.png';
-import logo2 from '../assets/sponsor/alokitoKhagrachari.png';
-import logo3 from '../assets/sponsor/chiniEmangProduction.png';
-import logo4 from '../assets/sponsor/JaduPC.png';
-import logo5 from '../assets/sponsor/Parleen.png';
-import logo6 from '../assets/sponsor/ZealCafe.png';
+import logo1 from '../../assets/logo.png';
+import logo2 from '../../assets/sponsor/alokitoKhagrachari.png';
+import logo3 from '../../assets/sponsor/chiniEmangProduction.png';
+import logo4 from '../../assets/sponsor/JaduPC.png';
+import logo5 from '../../assets/sponsor/Parleen.png';
+import logo6 from '../../assets/sponsor/ZealCafe.png';
 
 
 const Support = () => {
