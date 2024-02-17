@@ -23,6 +23,37 @@
   }
 
   .formInput {
-    @apply py-3 w-[300px] md:w-[340px] lg:w-[370px]  px-2 border-[1px] focus:outline-none font-medium rounded-lg bg-transparent border-[#19c3fc];
+    @apply py-3 w-[300px] md:w-[340px] lg:w-[370px] px-2 border-[1px] focus:outline-none font-medium rounded-lg bg-transparent border-[#19c3fc];
+  }
+}
+
+@media (min-width: 768px) and (max-width: 2400px) {
+  .self-class::before,
+  .self-class::after {
+    content: "";
+    width: 5px;
+    height: 200px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 100;
+  }
+
+  .middle-class::before,
+  .middle-class::after {
+    content: "";
+    width: 150px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    margin: auto;
+  }
+  .middle-class::before {
+    left: 27%;
+  }
+  .middle-class::after {
+    right: 27%;
   }
 }
