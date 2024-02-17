@@ -37,62 +37,46 @@ const Payment = () => {
                 <thead className=" border-b-[2px] text-[#FFFFFF] border-[#FFFFFF]">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      Name
+                      Method
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      Phone
+                      Payment Numver
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      Email
+                     Amount
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      Price
-                    </th>
-                    <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      quantity
-                    </th>
-                    <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      Status
+                      Trx Id
                     </th>
                   </tr>
                 </thead>
                 <tbody className=" divide-y divide-[#BDBDBD]">
                   {/* <!-- Table rows go here --> */}
-                  {registration?.data?.map((order) => {
+                  {registration?.data?.map((pamentItem) => {
                     return (
-                      <tr className=" " key={order._id}>
+                      <tr className=" " key={pamentItem._id}>
                         {/* {console.log(order, "oooo")} */}
                         <td className="pr-6 py-4 whitespace-no-wrap">
                           <div className="ml-4">
-                            <div className="text-sm leading-5 font-medium text-[#1B1B1B]">
-                              {order?.firstName} {order?.lastName}
+                            <div className="text-sm leading-5 font-medium text-[#FFFFF]">
+                              {pamentItem?.method}
                             </div>
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap">
-                          <div className="text-sm leading-5 text-[#1B1B1B]">
-                            {order?.phone}
+                          <div className="text-sm leading-5 text-[#FFFFFF]">
+                            {pamentItem?.paymentNumber}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-no-wrap">
                           <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {order?.email}
+                            {pamentItem?.amount}
                           </span>
                         </td>
 
                         <td className="px-6 py-4 whitespace-no-wrap">
                           <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {order?.price}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 whitespace-no-wrap">
-                          <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {order?.quantity}
-                          </span>
-                        </td>
-                        <td className="px-6 py-4 whitespace-no-wrap">
-                          <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ">
-                            {!order?.status ? "Pending" : "Success"}
+                            {pamentItem?.trxId}
                           </span>
                         </td>
                       </tr>
