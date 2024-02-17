@@ -7,6 +7,7 @@ import RegisterForm from '../components/registerForm';
 import Speakers from '../components/speakers';
 import Support from '../components/support';
 import Surprising from '../components/surprising';
+import Ticket from '../components/ticket';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Support />
         <Join />
         <RegisterForm />
+        <Ticket />
         <Speakers />
         <Location />
         {/* <Surprising /> */}
@@ -27,3 +29,13 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
+// const createdAtUTC = "2024-02-17T04:43:27.580Z";
+// const bdTimeZone = "Asia/Dhaka";
+
+// const createdAtBD = new Date(createdAtUTC);
+// const formattedBDTime = createdAtBD.toLocaleString("en-US", { timeZone: bdTimeZone });
+
+// con

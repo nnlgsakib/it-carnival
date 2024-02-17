@@ -4,11 +4,19 @@ import Swal from 'sweetalert2';
 import ClipboardJS from 'clipboard';
 import { useEffect, useRef } from 'react';
 import { FaRegCopy } from 'react-icons/fa';
+import Modal from "./modal";
 
 const RegisterForm = () => {
   const copyButtonRef = useRef();
+  const [modalOpen, setModalOpen] = useState(false);
 
+  const openModal = () => {
+    setModalOpen(true);
+  };
 
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   const [orderData, setOrderData] = useState({
     name: "",
     phone: "",
@@ -17,6 +25,8 @@ const RegisterForm = () => {
   });
 
   const handelSubmit = () => {
+    openModal();
+    return;
 
     const isAnyValueEmpty = Object.values(orderData).some(value => value === "");
     if (isAnyValueEmpty) {
@@ -85,7 +95,7 @@ const RegisterForm = () => {
 
 
   return (
-    <div id="registerSection   " >
+    <div id="registerSection" >
       <div className=""></div>
       <div className="lg:w-[65%] mx-auto">
         <h2 className="text-2xl font-semibold">Register</h2>
@@ -176,6 +186,7 @@ const RegisterForm = () => {
           </div>
         </div>
       </div>
+      <Modal isOpen={modalOpen} onClose={closeModal} />
     </div>
   );
 };
