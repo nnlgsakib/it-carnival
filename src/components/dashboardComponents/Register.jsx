@@ -7,7 +7,7 @@ const Register = () => {
   return (
     <div className=" py-5 pb-10 w-full">
       <h2 className="text-3xl text-center py-5 font-semibold ">Register</h2>
-      <div className="bg-gray-900 ring-2 ring-white rounded-lg w-6/12 mx-auto p-5">
+      <div className="bg-gray-900 rounded-lg w-6/12 mx-auto p-8">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col gap-5">
             <div>
@@ -23,6 +23,21 @@ const Register = () => {
               />
             </div>
             <div>
+              <label
+                className="block mb-2 text-[#FFFFFF]"
+                htmlFor="phone"
+              >
+                Phone
+              </label>
+              <input
+                className="w-full px-4 py-2 rounded-lg border border-red-400 outline-blue-300 text-[#000]"
+                type="number"
+                id="number"
+                {...register("number", { required: true })}
+                placeholder="Your phone number"
+              />
+            </div>
+            <div>
               <label className="block mb-2 text-[#FFFFFF]" htmlFor="email">
                 Email
               </label>
@@ -35,32 +50,18 @@ const Register = () => {
               />
             </div>
             <div>
-              <label className="block mb-2 text-[#FFFFFF]" htmlFor="password">
-                Password
+              <label className="block mb-2 text-[#FFFFFF]" htmlFor="trxid">
+                Trx Id
               </label>
               <input
                 className="w-full px-4 py-2 rounded-lg border border-red-400 outline-blue-300 text-[#000]"
-                type="password"
-                id="password"
-                {...register("password", { required: true })}
-                placeholder="Password"
+                type="text"
+                id="trxid"
+                {...register("trxid", { required: true })}
+                placeholder="Trx Id"
               />
             </div>
-            <div>
-              <label
-                className="block mb-2 text-[#FFFFFF]"
-                htmlFor="confirmPassword"
-              >
-                Confirm Password
-              </label>
-              <input
-                className="w-full px-4 py-2 rounded-lg border border-red-400 outline-blue-300 text-[#000]"
-                type="password"
-                id="password"
-                {...register("password", { required: true })}
-                placeholder="Confirm Password"
-              />
-            </div>
+          
             <div>
               <NavLink
                 to="/dashboard/login"

@@ -5,17 +5,17 @@ const DashboardLayout = () => {
   return (
     <div>
       <div className="w-full">
-        <div className="max-w-[1200px] mx-auto bg-gray-900 shadow-md shadow-[#FFFFFF] p-2">
-          <nav className="flex justify-between items-center">
+        {/* <div className="max-w-[1200px] mx-auto bg-gray-900 p-2"> */}
+          {/* <nav className="flex justify-between items-center">
             <img className="w-[100px]" src={logo} alt="" />
             <div className="flex items-center gap-10">
               <NavLink to="/dashboard">Registration</NavLink>
               <NavLink to="/dashboard">payment</NavLink>
             </div>
-          </nav>
-        </div>
+          </nav> */}
+        {/* </div> */}
         <div className="flex gap-5 max-w-[1200px] mx-auto mt-1">
-          <nav className="flex flex-col gap-3 px-3 w-[250px] bg-gray-900 h-screen sticky overflow-auto">
+          <nav className="flex flex-col gap-3 w-[250px] bg-gray-900 h-screen sticky top-0  overflow-auto">
             <NavLink
               to="/dashboard/registration"
               className={({ isActive }) =>
