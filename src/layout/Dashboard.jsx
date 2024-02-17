@@ -15,7 +15,7 @@ const DashboardLayout = () => {
           </nav>
         </div>
         <div className="flex gap-5 max-w-[1200px] mx-auto mt-1">
-          <nav className="flex flex-col gap-3 px-3 w-[250px] bg-gray-900 h-screen overflow-auto pt-5">
+          <nav className="flex flex-col gap-3 px-3 w-[250px] bg-gray-900 h-screen sticky overflow-auto">
             <NavLink
               to="/dashboard/registration"
               className={({ isActive }) =>
@@ -55,6 +55,26 @@ const DashboardLayout = () => {
               }
             >
               Add-Registration
+            </NavLink>
+            <NavLink
+              to="/dashboard/login"
+              className={({ isActive }) =>
+                `w-full py-3 rounded pl-2 transition-all duration-300 ${
+                  isActive ? "bg-green-300 text-black" : ""
+                }`
+              }
+            >
+              Login
+            </NavLink>
+            <NavLink
+              to="/dashboard/register"
+              className={({ isActive }) =>
+                `w-full py-3 rounded pl-2 transition-all duration-300 ${
+                  isActive ? "bg-green-300 text-black" : ""
+                }`
+              }
+            >
+              Register
             </NavLink>
           </nav>
           <Outlet />

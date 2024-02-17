@@ -12,6 +12,8 @@ import Registration from "./components/dashboardComponents/Registration";
 import Payment from "./components/dashboardComponents/Payment";
 import AddPayment from "./components/dashboardComponents/AddPayment";
 import AddRegistration from "./components/dashboardComponents/AddRegistration";
+import Login from "./components/dashboardComponents/Login";
+import Register from "./components/dashboardComponents/Register";
 
 function App() {
   const router = createBrowserRouter([
@@ -53,6 +55,14 @@ function App() {
         {
           path: "add-registration",
           element: <AddRegistration />,
+        },
+        {
+          path: "login",
+          element: <Login />,
+        },
+        {
+          path: "register",
+          element: <Register />,
         },
       ],
     },
