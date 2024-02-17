@@ -115,7 +115,7 @@ const RegisterForm = () => {
             <div className="">
               <IoMdCheckmarkCircleOutline className="text-green-400 pt-1  text-xl" />
             </div>
-            <p className="text-gray-300 ml-1 font-semibold">Money can be sent through Bkash or Nagad (only send money is available)</p>
+            <p className="text-gray-300 font-semibold">Money can be sent through Bkash or Nagad (only send money is available)</p>
           </div>
 
           <div className=" flex gap-1 pb">
