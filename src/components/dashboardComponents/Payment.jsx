@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-
+import { FaSearch } from "react-icons/fa";
 const Payment = () => {
   const [registration, setRegistration] = useState([]);
   useEffect(() => {
@@ -15,19 +15,20 @@ const Payment = () => {
   return (
     <>
       <div className=" py-5 pb-10 w-full relative">
-        <h2 className="text-3xl text-center py-5 font-semibold  ">Payment</h2>
+        <h2 className="text-3xl text-center py-5 font-semibold ">Payment</h2>
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="absolute w-[30%] right-0"
         >
-          <div className="relative ">
+          <div className="relative flex items-center gap-5">
             <input
               className="w-full px-4 py-2 rounded-lg border outline-blue-300 text-black"
               type="text"
               id="method"
-              {...register("method", { required: true })}
+              {...register("method")}
               placeholder="Search"
             />
+            <FaSearch className="text-4xl text-white hover:text-slate-500 duration-200"/>
           </div>
         </form>
         <div>
@@ -40,7 +41,7 @@ const Payment = () => {
                       Method
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                      Payment Numver
+                      Payment Number
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
                      Amount

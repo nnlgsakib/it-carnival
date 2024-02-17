@@ -1,6 +1,6 @@
 import html2canvas from 'html2canvas';
 import { useRef } from 'react';
-import image from '../assets/about.png';
+import image from '../../assets/about.png';
 
 const Modal = ({ isOpen, onClose }) => {
   const containerRef = useRef(null);

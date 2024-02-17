@@ -1,14 +1,20 @@
-import Vision from "../components/Vision";
-import About from "../components/about";
-import Banner from "../components/banner";
-import Footer from "../components/footer";
-import Join from "../components/join";
-import Location from "../components/location";
-import RegisterForm from "../components/registerForm";
-import Speakers from "../components/speakers";
-import Support from "../components/support";
-import Surprising from "../components/surprising";
-import Ticket from "../components/ticket";
+import Vision from "../components/homePageComponents/Vision";
+import About from "../components/homePageComponents/about";
+import Banner from "../components/homePageComponents/banner";
+import Footer from "../components/homePageComponents/footer";
+// import Join from "../components/homePageComponents/join";
+// import Join from "../components/homePageComponents/join";
+// import Join from "../components/homePageComponents/join";
+import Location from "../components/homePageComponents/location";
+import RegisterForm from "../components/homePageComponents/registerForm";
+// import RegisterForm from "../homePageComponents/components/registerForm";
+import Speakers from "../components/homePageComponents/speakers";
+import Support from "../components/homePageComponents/support";
+import Surprising from "../components/homePageComponents/surprising";
+// import About from "../components/homePageComponents/about";
+// import Banner from "../components/homePageComponents/banner";
+// import Support from "../components/homePageComponents/support";
+// import Ticket from "../components/ticket";
 
 const Home = () => {
   return (
@@ -17,7 +23,7 @@ const Home = () => {
       <div className="px-3 lg:px-6 max-w-[1280px] mx-auto">
         <About />
         <Support />
-        <Join />
+        {/* <Join /> */}
         <RegisterForm />
         {/* <Ticket /> */}
         <Speakers />
