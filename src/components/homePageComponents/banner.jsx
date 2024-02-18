@@ -13,7 +13,7 @@ const Banner = () => {
         <div
           className="relative h-[100vh]"
           style={{
-            background: `url(http://api-ipfs.web3twenty.com:3002/ipfs/QmdQAqaGUVQiSaVdtzu8ocFAtvejhxHrtt7FD4gsd3i82V)`,
+            background: `url(https://mainnet.mindscan.info/ipfs/QmdQAqaGUVQiSaVdtzu8ocFAtvejhxHrtt7FD4gsd3i82V)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
