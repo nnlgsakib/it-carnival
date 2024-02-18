@@ -9,7 +9,9 @@ import Modal from "./modal";
 const RegisterForm = () => {
   const copyButtonRef = useRef();
   const [modalOpen, setModalOpen] = useState(false);
+  const [data, setData] = useState();
 
+  console.log(data);
   const openModal = () => {
     setModalOpen(true);
   };
@@ -48,7 +50,7 @@ const RegisterForm = () => {
       .then((res) => res.json())
       .then((responseData) => {
         console.log(responseData);
-        if (responseData.statusCode === 404) {
+        if (responseData.success == false) {
           // transaction id 
           return Swal.fire({
             icon: "error",
@@ -56,18 +58,19 @@ const RegisterForm = () => {
             text: `${responseData?.message}`,
           });
         }
-        Swal.fire({
-          icon: "success",
-          title: "Success",
-          text: `${responseData?.message}`,
-        }).then(() => {
-          openModal();
-        });
+        if (responseData.success) {
+          setData(responseData.data);
+          Swal.fire({
+            icon: "success",
+            title: "Success",
+            text: `${responseData?.message}`,
+          }).then(() => {
+            openModal();
+          });
+        }
       })
-
       .catch((error) => {
         // Handle errors
-
         console.error('Error fetching data:', error);
       });
   };

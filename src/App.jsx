@@ -23,7 +23,7 @@ function App() {
       errorElement: <div className="text-3xl font-bold text-center mt-10">Not Found</div>,
       children: [
         {
-          path: "/",
+          path: "",
           element: <Home />,
         },
         {
