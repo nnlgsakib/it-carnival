@@ -9,7 +9,7 @@ const Vision = () => {
         Developer Guidance
       </h2>
       <div className="flex flex-col gap-5">
-        <div className="flex md:flex-row flex-col justify-between gap-10 items-center mt-5 text-white relative py-10">
+        <div className="flex md:flex-row flex-col justify-between gap-10 items-center mt-5 text-white relative md:py-10 py-0">
           <div className="p-10 flex-1 flex justify-start gap-9 border border-[#19c3fc] rounded-lg self-class">
             <FaBrain className="text-4xl" />
             <p>
@@ -25,14 +25,14 @@ const Vision = () => {
             </p>
           </div>
         </div>
-        <div className="flex justify-around relative">
+        {/* <div className="flex justify-around relative">
           <button className=" px-6 py-2 bg-[#2E0267] rounded">Enter</button>
           <h2 className="text-3xl font-bold text-red mx-5 middle-class text-cyan-400 bg-black">
             Hiltracts
           </h2>
           <button className=" px-6 py-2 bg-[#2E0267] rounded">Enter</button>
-        </div>
-        <div className="flex md:flex-row flex-col justify-between gap-10 items-center mt-5 text-white relative py-10">
+        </div> */}
+        <div className="flex md:flex-row flex-col justify-between gap-10 items-center mt-5 text-white relative md:py-10 py-0">
           <div className="p-10 flex-1 flex justify-start gap-9 border border-[#19c3fc] rounded-lg self-class">
             <FaBrain className="text-4xl" />
             <p>

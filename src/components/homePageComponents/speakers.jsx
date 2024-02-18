@@ -2,7 +2,7 @@ import speakers1 from "../../assets/images/pic-01.jpg";
 import speakers2 from "../../assets/images/pic-02.jpg";
 import speakers3 from "../../assets/images/pic-03.jpg";
 import speakers4 from "../../assets/images/pic-04.jpg";
-import speakers5 from "../../assets/images/rabbil.png";
+import speakers5 from "../../assets/images/pic-05.jpg";
 
 const Speakers = () => {
   const allSpeakers = [
@@ -25,6 +25,11 @@ const Speakers = () => {
       img: speakers4,
       name: "Rabbil Hasan",
       title: "senior software engineer, IDLC - Financing Happiness",
+    },
+    {
+      img: speakers5,
+      name: "Saidur Rahman Setu",
+      title: "founder of JS Bangladesh",
     }
   ];
 
