@@ -1,5 +1,4 @@
 import Header from "./header";
-import backgroundImage from '../../assets/banner.png';
 const Banner = () => {
   const scrollToTextSection = () => {
     const textSection = document.getElementById('registerSection');
@@ -14,7 +13,7 @@ const Banner = () => {
         <div
           className="relative h-[100vh]"
           style={{
-            background: `url(${backgroundImage})`,
+            background: `url(http://api-ipfs.web3twenty.com:3002/ipfs/QmdQAqaGUVQiSaVdtzu8ocFAtvejhxHrtt7FD4gsd3i82V)`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
