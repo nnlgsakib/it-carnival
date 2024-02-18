@@ -1,9 +1,11 @@
 import logo1 from '../../assets/logo.png';
-import logo2 from '../../assets/sponsor/alokitoKhagrachari.png';
-import logo3 from '../../assets/sponsor/chiniEmangProduction.png';
-import logo4 from '../../assets/sponsor/JaduPC.png';
-import logo5 from '../../assets/sponsor/Parleen.png';
-import logo6 from '../../assets/sponsor/ZealCafe.png';
+import logo2 from '../../assets/sponsor/alokito.png';
+import logo3 from '../../assets/sponsor/fiveDaily.png';
+import logo4 from '../../assets/sponsor/freeask.png';
+import logo5 from '../../assets/sponsor/jadu.png';
+import logo6 from '../../assets/sponsor/kids.png';
+import logo7 from '../../assets/sponsor/pearleen.png';
+import logo8 from '../../assets/sponsor/zealCaffe.png';
 
 
 const Support = () => {
@@ -29,8 +31,16 @@ const Support = () => {
       img: logo5
     },
     {
-      id: '5',
+      id: '6',
       img: logo6
+    },
+    {
+      id: '7',
+      img: logo7
+    },
+    {
+      id: '8',
+      img: logo8
     },
   ];
   return (

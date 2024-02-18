@@ -2,8 +2,7 @@ import { FaBook, FaPen, FaTshirt } from "react-icons/fa";
 import { LuSticker } from "react-icons/lu";
 const Surprising = () => {
   return (
-    <div className="py-5">
-      <h2 className="font-semibold text-2xl">Surprising Gifts</h2>
+    <div className="py-5 my-14">
       <div className="border-2 border-cyan-400 mx-auto border-dashed w-[500px] h-[500px] rote rounded-full relative">
         <div className="text-white relative w-[500px] h-[500px]">
           <div className="w-fit h-fit absolute top-0 left-0 right-0 bottom-0 m-auto">

@@ -20,16 +20,18 @@ const AddPayment = () => {
     })
       .then((res) => res.json())
       .then((responseData) => {
-        if (responseData === 200) {
+        console.log(responseData);
+        if (responseData.statusCode === 200) {
           reset();
           Swal.fire({
             icon: "success",
             title: "Success",
             text: `${responseData?.message}`,
           });
+        } else {
+          alert ("something wrong")
         }
       })
-
       .catch((error) => {
         // Handle errors
         console.error("Error fetching data:", error);

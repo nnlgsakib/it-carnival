@@ -9,29 +9,23 @@ const Speakers = () => {
     {
       img: speakers1,
       name: "Hasin Hayder",
-      title: 'Founder & Educator, Learn With Hasin Hayder'
+      title: "Founder & Educator, Learn With Hasin Hayder",
     },
     {
       img: speakers2,
-      name: "Rabbil Hasan Rupom",
-      title: 'Founder & Educator, Learn with Rabbil Hasan'
+      name: "Rahitul Islam",
+      title: "popular information technology writer and journalist.",
     },
     {
       img: speakers3,
-      name: "Saidur Rahman Setu",
-      title: 'Founder & Educator, JS Bangladesh'
+      name: "Masum Billah Bhuiyan",
+      title: " founder of Giant Marketers",
     },
     {
       img: speakers4,
-      name: "Founder & Educator, JS Bangladesh",
-      title: 'Founder, Jadupc'
-    },
-    {
-      img: speakers5,
-      name: "Founder & Educator, JS Bangladesh",
-      title: 'Head of Engineering, ZELF'
-    },
-
+      name: "Rabbil Hasan",
+      title: "senior software engineer, IDLC - Financing Happiness",
+    }
   ];
 
   return (
@@ -51,78 +45,25 @@ const Speakers = () => {
       </div>
 
       <div className="mx-auto grid py-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5 lg:gap-7">
-        <div className="flex-col text-center">
-          <div className="body ">
-            <div className="box">
-              <div className='content'>
-                <img className='' src={speakers5} alt="" />
-                <div className='flex flex-col'>
-                  {/* <h2>Lorem, ipsum dolor.</h2>
-                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
+        {allSpeakers.map((data, i) => (
+          <div key={i} className="flex-col text-center">
+            <div className="body ">
+              <div className="box">
+                <div className="content">
+                  <img className="" src={data.img} alt="" />
+                  <div className="flex flex-col">
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div>
-            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
-            <p className="text-[#d8d8d8] font-medium">
-              founder of Giant Marketers
-            </p>
-          </div>
-        </div>
-        <div className="body flex-col text-center">
-          <div className="box">
-            <div className='content'>
-              <img className='' src={speakers3} alt="" />
-              <div className='flex flex-col'>
-                {/* <h2>Lorem, ipsum dolor.</h2>
-                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
-              </div>
+            <div>
+              <h2 className="speakersName ">{data.name}</h2>
+              <p className="text-[#d8d8d8] font-medium">
+               {data.title}
+              </p>
             </div>
           </div>
-          <div>
-            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
-            <p className="text-[#d8d8d8] font-medium">
-              founder of Giant Marketers
-            </p>
-          </div>
-        </div>
-        <div className="body flex-col text-center">
-          <div className="box">
-            <div className='content'>
-              <img className='' src={speakers3} alt="" />
-              <div className='flex flex-col'>
-                {/* <h2>Lorem, ipsum dolor.</h2>
-                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
-            <p className="text-[#d8d8d8] font-medium">
-              founder of Giant Marketers
-            </p>
-          </div>
-        </div>
-        <div className="body flex-col text-center">
-          <div className="box">
-            <div className='content'>
-              <img className='' src={speakers3} alt="" />
-              <div className='flex flex-col'>
-                {/* <h2>Lorem, ipsum dolor.</h2>
-                <p className='w-[100px] cursor-pointer text-center mx-auto'>Connect</p> */}
-              </div>
-            </div>
-          </div>
-          <div>
-            <h2 className="speakersName ">Masum Billah Bhuiyan</h2>
-            <p className="text-[#d8d8d8] font-medium">
-              founder of Giant Marketers
-            </p>
-          </div>
-        </div>
-
-
+        ))}
       </div>
     </div>
   );
