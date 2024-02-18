@@ -9,7 +9,7 @@ const Registration = () => {
   const onSubmit = (data) => console.log(data);
   useEffect(() => {
     fetch(
-      "https://firstaidbox-server.vercel.app/api/v1/payment"
+      "https://firstaidbox-server.vercel.app/api/v1/registration"
     )
       .then((res) => res.json())
       .then((data) => setRegistration(data.data));

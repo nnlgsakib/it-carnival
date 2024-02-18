@@ -4,9 +4,7 @@ import { FaSearch } from "react-icons/fa";
 const Payment = () => {
   const [registration, setRegistration] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://firstaidbox-server.vercel.app/api/v1/payment"
-    )
+    fetch("https://firstaidbox-server.vercel.app/api/v1/payment")
       .then((res) => res.json())
       .then((data) => setRegistration(data.data));
   }, []);
@@ -28,7 +26,7 @@ const Payment = () => {
               {...register("method")}
               placeholder="Search"
             />
-            <FaSearch className="text-4xl text-white hover:text-slate-500 duration-200"/>
+            <FaSearch className="text-4xl text-white hover:text-slate-500 duration-200" />
           </div>
         </form>
         <div>
@@ -44,7 +42,7 @@ const Payment = () => {
                       Payment Number
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
-                     Amount
+                      Amount
                     </th>
                     <th className="px-6 py-3  text-left text-xs leading-4 font-medium  uppercase tracking-wider">
                       Trx Id
