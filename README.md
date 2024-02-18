@@ -20,7 +20,7 @@ Surprising Gifts
 <div>
 <div className="relative">
   {/* <div
-    className="h-[200px] w-[200px] -right-5 rounded-full absolute    bg-gradient-to-r from-[#fff]  to-[#fff] opacity-20 blur-2xl "
+    className="h-[200px] w-[200px] -right-5 rounded-full absolute  bg-gradient-to-r from-[#fff]  to-[#fff] opacity-20 blur-2xl "
   ></div> */}
   <div className=" "></div>
   {/* <div
