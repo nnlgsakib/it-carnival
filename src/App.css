@@ -163,12 +163,12 @@ body {
   }
 }
 
-.icons {
+/* .icons {
   transition: 0.5s;
   animation: iconsroted 12s linear infinite;
-}
+} */
 
-@keyframes iconsroted {
+/* @keyframes iconsroted {
   0% {
     transform: rotate(0deg);
   }
@@ -190,7 +190,7 @@ body {
 
 /* border roted */
 
-.icons {
+/* .icons {
   transition: 0.5s;
   animation: iconsroted 10s linear infinite;
-}
+} */ 

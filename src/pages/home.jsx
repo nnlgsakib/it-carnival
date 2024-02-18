@@ -27,8 +27,8 @@ const Home = () => {
         <RegisterForm />
         <Speakers />
         <Vision />
-        <Location />
         <Surprising />
+        <Location />
         <Footer />
       </div>
     </div>

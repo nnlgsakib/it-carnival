@@ -1,6 +1,8 @@
 import { FaBrain } from "react-icons/fa6";
+// import {  moveCursor } from "readline";
 
 const Vision = () => {
+  // const oncursor = moveCursor();
   return (
     <div className="max-w-[1200px] mx-auto mt-8">
       <h2 className="bg-cyan-400 w-fit py-2 px-4 rounded text-center mx-auto font-semibold after:content-[adfsas] after:w-10 after:h-2 after:bg-black">
@@ -27,7 +29,7 @@ const Vision = () => {
           <button className=" px-6 py-2 bg-gradient-to-r from-[#19c3fc] to-[#19d349] rounded">
             Enter
           </button>
-          <h2 className="text-3xl font-bold text-red z-[999] mx-5 middle-class text-cyan-400 bg-black">
+          <h2 className="text-3xl font-bold text-red mx-5 middle-class text-cyan-400 bg-black">
             Hiltracts
           </h2>
           <button className=" px-6 py-2 bg-gradient-to-r from-[#19c3fc] to-[#19d349] rounded">
