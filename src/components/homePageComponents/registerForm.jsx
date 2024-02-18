@@ -30,8 +30,8 @@ const RegisterForm = () => {
     if (isAnyValueEmpty) {
       return Swal.fire({
         icon: "error",
-        title: "All fild are required",
-        text: ` All fild ar required`,
+        title: "Empty Field",
+        text: ` All fild are required`,
       }).then(() => {
         openModal();
       });
@@ -49,6 +49,7 @@ const RegisterForm = () => {
       .then((responseData) => {
         console.log(responseData);
         if (responseData.statusCode === 404) {
+          // transaction id 
           return Swal.fire({
             icon: "error",
             title: "Faield",

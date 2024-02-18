@@ -1,7 +1,49 @@
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 const AddRegistration = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+
+
+    fetch("https://firstaidbox-server.vercel.app/api/v1/auth/login", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Add any additional headers if needed
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((responseData) => {
+        console.log(responseData);
+        // console.log(responseData?.errorMessages[0]?.message);
+        if (responseData?.success == false) {
+          return Swal.fire({
+            icon: "error",
+            title: "Faield",
+            text: `${responseData?.errorMessages[0]?.message}`,
+          });
+        }
+        if (responseData?.success == true) {
+          return Swal.fire({
+            icon: "success",
+            title: "Logdin success",
+            text: `${responseData?.message}`,
+          });
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error('Error fetching data:', error);
+        return Swal.fire({
+          icon: "error",
+          title: "Error fetching data",
+        });
+      });
+  };
+
+
   return (
     <>
       <div className=" py-5 pb-10 w-full">
