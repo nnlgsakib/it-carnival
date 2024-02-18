@@ -20,7 +20,7 @@ function App() {
     {
       path: "/",
       element: <Root />,
-      errorElement: <div>Error</div>,
+      errorElement: <div className="text-3xl font-bold text-center mt-10">Not Found</div>,
       children: [
         {
           path: "/",
@@ -29,6 +29,10 @@ function App() {
         {
           path: "/",
           element: <Home />,
+        },
+        {
+          path: "login",
+          element: <Login />,
         },
       ],
     },
